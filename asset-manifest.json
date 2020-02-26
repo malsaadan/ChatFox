@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/ChatFox/static/css/main.a8137d89.chunk.css",
+    "main.js": "/ChatFox/static/js/main.46087e02.chunk.js",
+    "main.js.map": "/ChatFox/static/js/main.46087e02.chunk.js.map",
+    "runtime-main.js": "/ChatFox/static/js/runtime-main.1df6241f.js",
+    "runtime-main.js.map": "/ChatFox/static/js/runtime-main.1df6241f.js.map",
+    "static/css/2.67123b20.chunk.css": "/ChatFox/static/css/2.67123b20.chunk.css",
+    "static/js/2.e2d04643.chunk.js": "/ChatFox/static/js/2.e2d04643.chunk.js",
+    "static/js/2.e2d04643.chunk.js.map": "/ChatFox/static/js/2.e2d04643.chunk.js.map",
+    "index.html": "/ChatFox/index.html",
+    "precache-manifest.30e9b1a8fd8bd557525bbb86ce82c78b.js": "/ChatFox/precache-manifest.30e9b1a8fd8bd557525bbb86ce82c78b.js",
+    "service-worker.js": "/ChatFox/service-worker.js",
+    "static/css/2.67123b20.chunk.css.map": "/ChatFox/static/css/2.67123b20.chunk.css.map",
+    "static/css/main.a8137d89.chunk.css.map": "/ChatFox/static/css/main.a8137d89.chunk.css.map",
+    "static/js/2.e2d04643.chunk.js.LICENSE.txt": "/ChatFox/static/js/2.e2d04643.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ChatFox/static/media/forest.951a5886.jpeg",
+    "static/media/logo2.png": "/ChatFox/static/media/logo2.b4ce467c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1df6241f.js",
+    "static/css/2.67123b20.chunk.css",
+    "static/js/2.e2d04643.chunk.js",
+    "static/css/main.a8137d89.chunk.css",
+    "static/js/main.46087e02.chunk.js"
+  ]
+}
