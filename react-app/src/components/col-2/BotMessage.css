@@ -1,0 +1,25 @@
+.bot-container img {
+    display: inline;
+    width: 8%;
+}
+
+.bot-container {
+    margin-top: 5%;
+    margin-left: 0;
+    text-align: left;
+}
+
+#bot {
+    border: 1px solid #DEDEDE;
+    background-color: #DEDEDE;
+    border-radius: 5px;
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+span img {
+    padding: 2.5%;
+    margin: auto;
+    cursor: pointer;
+}

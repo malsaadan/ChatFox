@@ -1,0 +1,20 @@
+.user-container img {
+    display: inline;
+    width: 6%;
+}
+
+.user-container {
+    margin-top: 5%;
+    text-align: right;
+    margin-right: 2%;
+}
+
+span {
+    border: 1px solid #DEDEDE;
+    background-color: #DEDEDE;
+    padding: 2%;
+    border-radius: 5px;
+    text-align: right;
+    margin-top: 5%;
+    margin-left: 5%;
+}

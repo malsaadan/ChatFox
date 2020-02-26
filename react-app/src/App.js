@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
-import CommandList from "./components/CommandList";
+import CommandList from "./components/col-1/CommandList";
 import Axios from "axios";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import logo from "./logo2.png";
+import ChatContainer from "./components/col-2/ChatContainer";
 
 export default class App extends React.Component {
   render() {
@@ -18,7 +19,7 @@ export default class App extends React.Component {
             <CommandList />
           </Col>
           <Col md lg className="col">
-            xs=12 md=8
+            <ChatContainer/>
           </Col>
         </Row>{" "}
       </Container>

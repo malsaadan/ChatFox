@@ -1,0 +1,55 @@
+#chat-container {
+    margin-top: 5%;
+    width: 90%;
+    height: 415px;
+    border: 2px solid #DEDEDE;
+    border-style: ridge;
+    border-radius: 1%;
+    color: #1F2326;
+    overflow-y: auto;
+}
+
+.msg-container {
+  margin-bottom: 350px;
+}
+
+form {
+    position: sticky;
+    bottom: 2%;
+    /* This bit sets up the horizontal layout */
+    display:inline-flex;
+    flex-direction:row;
+    width: 76%;
+    height: auto;
+
+    justify-self: center;
+    /* This bit draws the box around it */
+    border:1px double #BABABA;
+  
+    border-radius: 5px;
+    /* I've used padding so you can see the edges of the elements. */
+    padding:2px;
+    margin-top: 1%;
+  }
+  
+  input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+  }
+  
+  input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+  
+  #submit-button {
+    /* Just a little styling to make it pretty */
+    flex-grow:0;
+    width: fit-content;
+    height: fit-content;
+    background: url('./send-icon.png') center no-repeat;
+    background-size: contain;
+    outline: none;
+  }

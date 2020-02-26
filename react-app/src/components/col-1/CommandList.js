@@ -115,7 +115,7 @@ export default class CommandList extends React.Component {
     const show = this.state.show;
     return (
       <Container>
-        <ListGroup style={{ "max-height": "415px", "overflow-y": "auto" }}>
+        <ListGroup style={{ "max-height": "415px", "overflow-y": "auto"}}>
           <AddItem
             show={show}
             handleClose={() => this.handleClose()}
@@ -131,15 +131,15 @@ export default class CommandList extends React.Component {
           variant="outline-dark"
           size="md"
           onClick={() => this.handleDeleteAllItems()}
-          style={{ position: "sticky", bottom: "0", "margin-top": "1%" }}
+          style={{ position: "sticky", bottom: "1%", "margin-top": "1%" }}
         >
           Delete All Commands
         </Button>{" "}
         <Button
-          variant="dark"
+          variant="outline-dark"
           size="md"
           onClick={() => this.handleShow()}
-          style={{ position: "sticky", bottom: "0", "margin-top": "1%" }}
+          style={{ position: "sticky", bottom: "1%", "margin-top": "1%" }}
         >
           Add a new command
         </Button>
