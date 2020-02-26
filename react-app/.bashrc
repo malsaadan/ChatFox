@@ -1,0 +1,1 @@
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/mashaelmohammed/sei/projects/Project-2/react-app/chatfox-moxmpy-bc8759198163.json

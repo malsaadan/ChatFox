@@ -1,0 +1,28 @@
+                                                      Index
+                                                        |
+                                                        |
+                                                       App
+                                                        |
+                               _________________________|_________________________
+                              |                                                   |
+                              |                                                   |
+                        CommandList                                             AddItem
+                              |
+                              |
+                         CommandItem
+                              |
+     _________________________|_________________________
+    |                         |                         |
+ Listen                    EditItem                 DeleteItem
+
+
+
+
+TODO:
+        - ~ App
+            - X AddItem
+            - ~ CommandList
+                - X CommandItem
+                    - Listen
+                    - ~ EditItem
+                    - X DeleteItem

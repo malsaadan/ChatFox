@@ -1,0 +1,26 @@
+.header {
+    margin-top: 0;
+    text-align: left;
+    border-bottom: 1px outset #000000;
+    width: 100%;
+    height: fit-content;
+}
+
+.main-container {
+    background-color: rebeccapurple;
+}
+.col {
+    padding-top: 2%;
+    background-color: hotpink;
+    height: 88.8vh;
+}
+
+.col:not(:last-child){
+    border-right: 1px outset #000000;
+}
+
+img {
+    width: 20%;
+    height: auto;
+
+}

@@ -1,0 +1,14 @@
+* {
+    font-family: 'RobotoSlap';
+    font-size: 15px;
+}
+
+div {
+    text-align: center;
+}
+
+
+#root {
+    background-image: url('./forest.jpeg');
+    margin: 0px;
+}
