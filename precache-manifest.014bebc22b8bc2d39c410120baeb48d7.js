@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d09a6ec1fcd45faf97eb568b37a6e0a8",
+    "revision": "290c31f2d6c713bf056b9a3f326ea143",
     "url": "/ChatFox/index.html"
   },
   {
-    "revision": "85455acd003aa74118a6",
+    "revision": "1610da9d843c59c83d3f",
     "url": "/ChatFox/static/css/2.67123b20.chunk.css"
   },
   {
-    "revision": "845fefd05e9e0c00e9cc",
-    "url": "/ChatFox/static/css/main.a8137d89.chunk.css"
+    "revision": "0d07952db1dd48b456a1",
+    "url": "/ChatFox/static/css/main.cd26a609.chunk.css"
   },
   {
-    "revision": "85455acd003aa74118a6",
-    "url": "/ChatFox/static/js/2.e2d04643.chunk.js"
+    "revision": "1610da9d843c59c83d3f",
+    "url": "/ChatFox/static/js/2.7966d18c.chunk.js"
   },
   {
     "revision": "bfc08a62983de46a4daec9f8c3c657d8",
-    "url": "/ChatFox/static/js/2.e2d04643.chunk.js.LICENSE.txt"
+    "url": "/ChatFox/static/js/2.7966d18c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "845fefd05e9e0c00e9cc",
-    "url": "/ChatFox/static/js/main.46087e02.chunk.js"
+    "revision": "0d07952db1dd48b456a1",
+    "url": "/ChatFox/static/js/main.dce91c02.chunk.js"
   },
   {
     "revision": "f17f84899eea95276bf8",
