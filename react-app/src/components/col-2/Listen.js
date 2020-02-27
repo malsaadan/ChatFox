@@ -13,29 +13,23 @@ export default class Listen extends React.Component {
     handleListenClick = () => {
         Axios({
             method: 'POST',
-            url: `https://cors-anywhere.herokuapp.com/https://www.de-vis-software.ro/tts.aspx`,
-            data: {
-                    "inputtext":"Hello World",
-                    "ssml":"Text",
-                    "voicename":"en-US-PREMIUM-C_FEMALE",
-                    "voicetype":"HeadPhones",
-                    "encoding":"Mp3",
-                    "speed":1,
-                    "pitch":0,
-                    "volume":0,
-                    "saveFileLocally":"Yes"
-            },
+            url: `https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/3d7362c7-9ec3-406e-88a0-cebf18c0e328/v1/synthesize`,
+            data: 
+                {"text":"hello world"}
+            ,
             headers: {
-                "Content-Type": "text/plain",
-                "Authorization": "Basic bWFzaGFlbDQ2MEBnbWFpbC5jb206TWFzaGFlbEAxMjM0NQ==",
+                "Authorization": "Basic YXBpa2V5OllMTXU5U1VoWHJIeEpiM0Z2ektfYTlQM2RITHFvRmJ3MXl4Z3JYZGRBUGgy",
+                "Accept": "audio/base",
             }
         })
         .then(res => {
             this.setState({
                 src: res.data,
                 play: true,
-            })
+            });
             console.log(res);
+
+            
         })
         .catch(err => {
             console.log(err)

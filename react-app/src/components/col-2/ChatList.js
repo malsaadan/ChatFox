@@ -8,8 +8,6 @@ export default class ChatList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // botMsgs: ["Welcome"],
-      // userMsgs: []
       messages: [],
     };
   }
@@ -36,7 +34,7 @@ export default class ChatList extends React.Component {
           });
           return;
         }
-        else 
+      }
         msg = "Sorry, I didn't get that. Can you rephrase?";
         const message = {
           userMsg: this.state.input,
@@ -49,11 +47,8 @@ export default class ChatList extends React.Component {
           messages: messages,
           input: '',
         });
-        return;
-      };
-    };
   };
-
+  }
   // A function to handle input boxes
   handleBoxChange = e => {
     // a variable that holds the input value
@@ -64,12 +59,7 @@ export default class ChatList extends React.Component {
   };
 
   render() {
-    // const allBotMessages = this.state.botMsgs.map((message, index) => {
-    //   return <BotMessage key={index} botMsg={message} />;
-    // });
-    // const allUserMessages = this.state.userMsgs.map((message, index) => {
-    //   return <UserMessage key={index} userMsg={message} />;
-    // });
+
     const allMessages = this.state.messages.map((message,index)=> {
       return(
         <div>
@@ -82,8 +72,6 @@ export default class ChatList extends React.Component {
     return (
       <Container id="chat-container">
         <Container className="msg-container">
-          {/* {allBotMessages}
-          {allUserMessages} */}
           {allMessages}
         </Container>
         <form>

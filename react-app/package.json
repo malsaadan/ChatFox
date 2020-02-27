@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
+    "audio-decode": "^1.4.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "dialogflow": "^1.2.0",

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import CommandList from "./components/col-1/CommandList";
-import Axios from "axios";
+import axios from "axios";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import logo from "./logo2.png";
 import ChatList from "./components/col-2/ChatList";
@@ -12,13 +12,13 @@ export default class App extends React.Component {
     this.state= {
       intents: [
         {
-          phrase: "Hello",
-          message: "Hi there",
-          id: 0
+          phrase: "",
+          message: "",
+          id: 0,
         },
       ],
     }
-  }
+  };
 
   handleIntents = (intents) => {
     this.setState({
@@ -47,3 +47,4 @@ export default class App extends React.Component {
 
   componentDidMount() {}
 }
+
