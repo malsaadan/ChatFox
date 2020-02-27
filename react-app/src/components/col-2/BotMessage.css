@@ -1,9 +1,12 @@
 .bot-container img {
     display: inline;
-    width: 8%;
+    width:7.5%;
 }
 
 .bot-container {
+    width: fit-content;
+    height: auto;
+    margin: auto;
     margin-top: 5%;
     margin-left: 0;
     text-align: left;

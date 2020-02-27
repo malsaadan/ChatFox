@@ -8,24 +8,6 @@ export default class CommandList extends React.Component {
     super(props);
 
     this.state = {
-      intents: [
-        {
-          phrase: "Hello",
-          message: "Hi there",
-          id: 0
-        },
-        { phrase: "ee", message: "ww", id: 1 },
-        {
-          phrase: "itkkrtj",
-          message: "Hi tkr",
-          id: 2
-        },
-        {
-          phrase: "jfkref",
-          message: "tklejtklj klrejtkerjtkrjtlkre",
-          id: 3
-        }
-      ],
       show: false
     };
   }
@@ -39,16 +21,17 @@ export default class CommandList extends React.Component {
       id: randomId
     };
 
-    const newIntents = this.state.intents.slice();
+    const newIntents = this.props.intents.slice();
     newIntents.unshift(newIntent);
-    this.setState({
-      intents: newIntents
-    });
+    // this.setState({
+    //   intents: newIntents
+    // });
+    this.props.handleIntents(newIntents);
   };
 
   handleEditItem = (command, newPhrase, newMessage) => {
     // Getting commands array from intents state
-    const commands = this.state.intents.slice();
+    const commands = this.props.intents.slice();
 
     // Getting index of command passed argument
     const commandIndex = commands.indexOf(command);
@@ -58,15 +41,17 @@ export default class CommandList extends React.Component {
     commands[commandIndex].message = newMessage;
 
     // Update the state with the new array
-    this.setState({
-      intents: commands
-    });
+    // this.setState({
+    //   intents: commands
+    // });
+    this.props.handleIntents(commands);
+
   };
 
   // Function that Deletes commands
   handleDeleteItem = command => {
     // Cloning commands array from intents state
-    const commands = this.state.intents.slice();
+    const commands = this.props.intents.slice();
 
     // Getting index of command passed argument
     const commandIndex = commands.indexOf(command);
@@ -75,15 +60,20 @@ export default class CommandList extends React.Component {
     commands.splice(commandIndex, 1);
 
     // Reassign the intents array to the new array
-    this.setState({
-      intents: commands
-    });
+    // this.setState({
+    //   intents: commands
+    // });
+    this.props.handleIntents(commands);
+
   };
 
   handleDeleteAllItems = () => {
-    this.setState({
-      intents: []
-    });
+    const commands = [];
+    // this.setState({
+    //   intents: []
+    // });
+    this.props.handleIntents(commands);
+
   };
 
   handleClose = () =>
@@ -97,7 +87,7 @@ export default class CommandList extends React.Component {
     });
 
   render() {
-    const allCommands = this.state.intents.map((command, index) => {
+    const allCommands = this.props.intents.map((command, index) => {
       return (
         <ListGroup.Item>
           <CommandItem
@@ -115,11 +105,11 @@ export default class CommandList extends React.Component {
     const show = this.state.show;
     return (
       <Container>
-        <ListGroup style={{ "max-height": "415px", "overflow-y": "auto"}}>
+        <ListGroup style={{ "max-height": "410px", "overflow-y": "auto"}}>
           <AddItem
             show={show}
             handleClose={() => this.handleClose()}
-            intents={this.state.intents}
+            intents={this.props.intents}
             handleAddCommand={(newPhrases, newMessages) =>
               this.handleAddCommand(newPhrases, newMessages)
             }
@@ -131,7 +121,7 @@ export default class CommandList extends React.Component {
           variant="outline-dark"
           size="md"
           onClick={() => this.handleDeleteAllItems()}
-          style={{ position: "sticky", bottom: "1%", "margin-top": "1%" }}
+          style={{ position: "sticky", bottom: "2%"}}
         >
           Delete All Commands
         </Button>{" "}
@@ -139,7 +129,7 @@ export default class CommandList extends React.Component {
           variant="outline-dark"
           size="md"
           onClick={() => this.handleShow()}
-          style={{ position: "sticky", bottom: "1%", "margin-top": "1%" }}
+          style={{ position: "sticky", bottom: "2%"}}
         >
           Add a new command
         </Button>

@@ -1,28 +1,57 @@
 import React from "react";
 import BotMessage from "./BotMessage";
 import UserMessage from "./UserMessage";
-import './ChatContainer.css';
+import "./ChatList.css";
 import { Container } from "react-bootstrap";
 
 export default class ChatList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      botMsgs: ["Welcome"],
-      userMsgs: [],
+      // botMsgs: ["Welcome"],
+      // userMsgs: []
+      messages: [],
     };
   }
 
   handleSendClick = e => {
     e.preventDefault();
-    console.log("Send button clicked");
-    if (this.state.input){
-       this.setState({
-        userMsgs: [...this.state.userMsgs, this.state.input],
-        input: '',
-      }); 
-    }
-      
+    if (this.state.input) {
+      const intents = this.props.intents.slice();
+      let msg = '';
+      for(let i = 0; i < intents.length; i++){
+        if (this.state.input.toLowerCase() === intents[i].phrase.toLowerCase()) 
+        {
+          msg = intents[i].message
+          const message = {
+            userMsg: this.state.input,
+            botMsg: msg,
+          }
+          const messages = this.state.messages.slice();
+          messages.push(message);
+          console.log(message)
+          this.setState({
+            messages: messages,
+            input: '',
+          });
+          return;
+        }
+        else 
+        msg = "Sorry, I didn't get that. Can you rephrase?";
+        const message = {
+          userMsg: this.state.input,
+          botMsg: msg,
+        }
+        const messages = this.state.messages.slice();
+        messages.push(message);
+        console.log(message)
+        this.setState({
+          messages: messages,
+          input: '',
+        });
+        return;
+      };
+    };
   };
 
   // A function to handle input boxes
@@ -35,18 +64,27 @@ export default class ChatList extends React.Component {
   };
 
   render() {
-    const allBotMessages = this.state.botMsgs.map((message, index) => {
-        return <BotMessage key={index} botMsg={message} />;
-    });
-    const allUserMessages =  this.state.userMsgs.map((message, index) => {
-        return <UserMessage key={index} userMsg={message} />;
+    // const allBotMessages = this.state.botMsgs.map((message, index) => {
+    //   return <BotMessage key={index} botMsg={message} />;
+    // });
+    // const allUserMessages = this.state.userMsgs.map((message, index) => {
+    //   return <UserMessage key={index} userMsg={message} />;
+    // });
+    const allMessages = this.state.messages.map((message,index)=> {
+      return(
+        <div>
+          <UserMessage key={index} userMsg={message.userMsg}/>
+          <BotMessage key={index} botMsg={message.botMsg}/>
+        </div>
+      )
     })
 
     return (
-      <div>
+      <Container id="chat-container">
         <Container className="msg-container">
-        {allBotMessages}
-        {allUserMessages}
+          {/* {allBotMessages}
+          {allUserMessages} */}
+          {allMessages}
         </Container>
         <form>
           <input
@@ -54,11 +92,6 @@ export default class ChatList extends React.Component {
             value={this.state.input}
             type="text"
             id="chat-input"
-            style={{
-              width: "200px",
-              height: "20px",
-              "padding-right": "50px"
-            }}
             onChange={e => this.handleBoxChange(e)}
           />
           <input
@@ -70,7 +103,7 @@ export default class ChatList extends React.Component {
             onClick={e => this.handleSendClick(e)}
           />
         </form>
-      </div>
+      </Container>
     );
   }
 }

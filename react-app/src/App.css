@@ -1,6 +1,6 @@
 .header {
     text-align: left;
-    border-bottom: 1px outset #000000;
+    border-bottom: 2px outset #000000;
     height: fit-content;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .col:not(:last-child){
-    border-right: 1px outset #000000;
+    border-right: 2px outset #000000;
 }
 
 img {

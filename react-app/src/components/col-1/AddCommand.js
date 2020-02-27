@@ -1,7 +1,6 @@
 import React from "react";
 import Axios from "axios";
 import { Button, InputGroup, FormControl, Modal } from "react-bootstrap";
-import { Form } from "react-bootstrap";
 
 export default class AddItem extends React.Component {
   constructor(props) {

@@ -1,9 +1,8 @@
-.user-container img {
-    display: inline;
-    width: 6%;
-}
 
 .user-container {
+    width: 20%;
+    height: auto;
+    margin: auto;
     margin-top: 5%;
     text-align: right;
     margin-right: 2%;

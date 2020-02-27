@@ -1,4 +1,6 @@
 #chat-container {
+    display: flex;
+    flex-direction: column;
     margin-top: 5%;
     width: 90%;
     height: 415px;
@@ -6,30 +8,30 @@
     border-style: ridge;
     border-radius: 1%;
     color: #1F2326;
-    overflow-y: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1%;
 }
 
 .msg-container {
-  margin-bottom: 350px;
+  max-height: 350px;
+  overflow-y: scroll;
+  position: sticky;
 }
 
 form {
-    position: sticky;
-    bottom: 2%;
     /* This bit sets up the horizontal layout */
     display:inline-flex;
     flex-direction:row;
     width: 76%;
     height: auto;
 
-    justify-self: center;
     /* This bit draws the box around it */
     border:1px double #BABABA;
   
     border-radius: 5px;
     /* I've used padding so you can see the edges of the elements. */
     padding:2px;
-    margin-top: 1%;
   }
   
   input {
@@ -53,3 +55,10 @@ form {
     background-size: contain;
     outline: none;
   }
+
+  #chat-input {
+    width: 200px;
+    height: 25px;
+    padding-right: 50px;
+  }
+ 
