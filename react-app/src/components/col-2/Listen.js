@@ -5,12 +5,14 @@ import Axios from 'axios';
 export default class Listen extends React.Component {
     constructor(props){
         super(props);
+        // A state that holds the source of the audio
         this.state = {
             src: '',
         };
 
     }
     handleListenClick = () => {
+        // API request with axios
         Axios({
             method: 'POST',
             url: `https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/3d7362c7-9ec3-406e-88a0-cebf18c0e328/v1/synthesize`,
@@ -39,6 +41,7 @@ export default class Listen extends React.Component {
 
     render() {
         return(
+            // Displaying an icon that when the user clicks on it the audio will play
             <span>
                 <img
             src={require("./listen-icon.png")}

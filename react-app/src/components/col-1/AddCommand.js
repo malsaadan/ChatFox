@@ -5,6 +5,7 @@ import { Button, InputGroup, FormControl, Modal } from "react-bootstrap";
 export default class AddItem extends React.Component {
   constructor(props) {
     super(props);
+    // 2 states to hold the new values of the command to be added
     this.state = {
       newPhrase: "",
       newMessage: ""
@@ -45,11 +46,15 @@ export default class AddItem extends React.Component {
   render() {
     return (
       <div>
+        {/* If the passed props show is true >> display modal, onHide method is a function to hide the modal when the user clicks on close */}
         <Modal show={this.props.show} onHide={() => this.props.handleClose()}>
+          {/* A header for the modal */}
           <Modal.Header closeButton>
             <Modal.Title>Add a New Command</Modal.Title>
           </Modal.Header>
 
+          {/* A body that contains group of inputs to enter the phrase and the response and has a form control to
+          handle the change of inputs to save them in the state to be passed later */}
           <Modal.Body>
             <InputGroup size="sm" className="mb-3">
               <InputGroup.Prepend>
@@ -78,9 +83,11 @@ export default class AddItem extends React.Component {
                 onChange={e => this.handleBoxChange(e)}
               />
             </InputGroup>
+            {/* Close button to hide the modal when clicked (Cancel add command) */}
             <Button variant="dark" onClick={() => this.props.handleClose()}>
               Close
             </Button>{" "}
+            {/* Add button which will add the command to the list (as a confirm) */}
             <Button variant="outline-dark" onClick={e => this.checkInputs(e)}>
               Add
             </Button>
